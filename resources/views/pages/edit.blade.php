@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h3 align="center" class="mt-5">Employee Management</h3>
+        <h3 align="center" class="mt-5">Employee Update</h3>
 
         <div class="row">
             <div class="col-md-2">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <label>Address</label>
+                            <label>Phone</label>
                             <input type="text" class="form-control" name="phone" value="{{ $employee->phone }}">
                         </div>
 
