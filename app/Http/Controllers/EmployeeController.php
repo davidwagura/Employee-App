@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -9,6 +10,16 @@ class EmployeeController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    protected $employee;
+
+    public function _construct()
+    {
+        $this->employee = new Employee();
+     
+    }
+
+
     public function index()
     {
         //
@@ -27,7 +38,9 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->employee->create($request->all());
+
+        return redirect()->back();
     }
 
     /**
